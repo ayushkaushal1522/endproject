@@ -1,0 +1,21 @@
+<% layout('layouts/boilerplate') %>
+
+<%-include('../partials/flash')%>
+<div class="row">
+    <div class="col-lg-6 product-card mt-5">
+
+            <div class="card shadow mt-3 mx-auto" style="width: 22rem;">
+                <div class="card-body">
+                  <h3 class="card-title text-center"> <%= foundProduct.company %> </h3>
+                  <p class="card-text"> Model : <%= foundProduct.model %> </p>
+                  <h5 class="card-title"> Rs: <%= foundProduct.year %> </h5>
+                  <h5 class="card-title"> Rs: <%= foundProduct.mileage %> </h5>
+                  <a href="#" class="btn btn-success">Buy</a>
+                  <a href="/cars/<%=foundProduct._id%>/edit" class="btn btn-info">Edit</a>
+                </div>
+            </div>
+    </div>
+
+    
+
+</div>

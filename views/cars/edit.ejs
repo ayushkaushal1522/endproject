@@ -1,0 +1,32 @@
+<% layout('layouts/boilerplate') %>
+
+
+<div class="row">
+    <div class="col-6 mx-auto">
+        <form action="/cars/<%=foundProduct._id%>?_method=PATCH" method="POST" class="needs-validation" novalidate>
+            <div class="mb-3">
+                <label for="company" class="form-label">Company Name: </label>
+                <input type="text" class="form-control" name="company" id="company" placeholder="Company Name" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+                <div id="validationServer03Feedback" class="invalid-feedback">
+                    Please provide a valid company name.
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="model" class="form-label">Model: </label>
+                <input type="text" class="form-control" name="model" id="model" placeholder="Model of the car"  required >
+            </div>
+            <div class="mb-3">
+                <label for="year" class="form-label">Year: </label>
+                <input type="text" class="form-control" name="year" id="year" placeholder="Year of the Car"  required >
+            </div>
+            <div class="mb-3">
+                <label for="mileage" class="form-label">Mileage: </label>
+                <input type="text" class="form-control" name="mileage" id="mileage" placeholder="Mileage of the Car"  required >
+            </div>
+            <button type="submit" class="btn btn-sm btn-success">Save Changes</button>
+        </form>
+    </div>
+</div>

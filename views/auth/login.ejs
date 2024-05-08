@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .formbox{
+            width:50vw;
+            margin:30px auto;
+            border:2px solid green;
+            height:500px
+        }
+        h1{
+            font-weight: bold;
+            color:blue;
+        
+        }
+        .firstinput{
+            width:350vw;
+            margin:30px auto;
+            height:50px
+        }
+    </style>
+</head>
+<body>
+    <div class="formbox">
+        <h1>Login page</h1>
+        <form action="/login" method="POST"  >
+
+            <div class="firstinput">
+                <label for="naam">Username</label>
+                <input type="text" name="username" id="naam"> 
+            </div>
+            <div class="firstinput">
+                <label for="pass">Password</label>
+                <input type="text" name="password" id="pass">
+            </div>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+    
+</body>
+</html>

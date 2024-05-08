@@ -1,0 +1,23 @@
+
+<% layout('layouts/boilerplate') %>
+<%-include('../partials/flash')%>
+
+<div class="row">
+    
+
+    <% for(let item of products){ %>
+
+        <div class="col-lg-4 product-card">
+            <div class="card text-center shadow mt-3 mx-auto" style="width: 18rem;">
+                <div class="card-body">
+                  <h3 class="card-title"> <%= item.company %> </h3>
+                  <h5 class="card-title"> Rs: <%= item.model %> </h5>
+                  <p class="card-text"> <%= item.year %> </p>
+                  <p class="card-text"> <%= item.mileage %> </p>
+                  <a href="/cars/<%=item._id%>" class="btn btnn btn-primary">View Info</a>
+                </div>
+            </div>
+        </div>
+        
+    <% } %>
+</div>
