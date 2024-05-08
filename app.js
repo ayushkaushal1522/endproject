@@ -22,7 +22,7 @@ mongoose.set('strictQuery', true);
 
 const connecttomongo = async()=>{
     await mongoose.connect(
-        "mongodb+srv://ayushkaushal:ayushkaushal@cluster0.g4af0hk.mongodb.net/hotel?retryWrites=true&w=majority",
+        process.env.MONGO_URL,
         { useNewUrlParser: true, useUnifiedTopology: true }
     ),
     
@@ -58,10 +58,10 @@ app.use(flash());
 
 app.use(passport.initialize());
 app.use(passport.session());
-// passport.serializeUser(User.serializeUser());
-// passport.deserializeUser(User.deserializeUser());
+passport.serializeUser(User.serializeUser());
+passport.deserializeUser(User.deserializeUser());
 
-// passport.use(new LocalStrategy(User.authenticate()));
+passport.use(new LocalStrategy(User.authenticate()));
 
 app.use((req,res,next)=>{
     res.locals.success = req.flash('success');
